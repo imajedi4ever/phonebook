@@ -49,13 +49,11 @@ a:focus {
 
 .glyphicon-form-control {
   color: #000;
-  font-size: 0.8em;
   margin: 5px;
 }
 
 .glyphicon-form-control:hover {
   color: #642667;
-  font-size: 0.8em;
 }
 
 .form-control-edit {
