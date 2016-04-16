@@ -21,6 +21,12 @@ angular.module( 'myApp.contacts', [
   $scope.header = 'Contacts';
 
   $http.get( 'assets/contacts.json' ).then( function( response ) {
+
     $scope.$storage.contacts = response.data.contacts;
   } );
+
+  $scope.submit = function() {
+    console.log( "Submitted" );
+    $scope.contact.name = $scope.name;
+  };
 } );

@@ -3,18 +3,62 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-4 col-md-4">
-        <img ng-src="{{ avatar }}" />
+        <!-- // TODO Uncomment img when ready -->
+        <div ng-hide="editAvatarEnabled">
+          <!--<img ng-src="{{ avatar }}" />--> <a ng-click="enableEdit( 'avatar' )"><i class="glyphicon glyphicon-edit glyphicon-form-control" aria-hidden="true"></i></a>
+        </div>
+        <div ng-show="editAvatarEnabled" class="form-control-avatar">
+          <input class="form-control form-control-edit" ng-model="editableAvatar" ng-show="editAvatarEnabled" />
+          <a ng-click="saveInput( 'avatar' )"><i class="glyphicon glyphicon-save glyphicon-form-control" aria-hidden="true"></i></a>
+          <a ng-click="disableEdit( 'avatar' )"><i class="glyphicon glyphicon-remove-circle glyphicon-form-control" aria-hidden="true"></i></a>
+        </div>
       </div>
       <div class="col-sm-8 col-md-8">
         <dl class="dl-horizontal">
           <dt>Name:</dt>
-          <dd>{{ name }}</dd>
+          <dd>
+            <div ng-hide="editNameEnabled" class="contact-name">
+              {{ name }} <a ng-click="enableEdit( 'name' )"><i class="glyphicon glyphicon-edit glyphicon-form-control" aria-hidden="true"></i></a>
+            </div>
+            <div ng-show="editNameEnabled">
+              <input class="form-control form-control-edit" ng-model="editableName" ng-show="editNameEnabled" />
+              <a ng-click="saveInput( 'name' )"><i class="glyphicon glyphicon-save glyphicon-form-control" aria-hidden="true"></i></a>
+              <a ng-click="disableEdit( 'name' )"><i class="glyphicon glyphicon-remove-circle glyphicon-form-control" aria-hidden="true"></i></a>
+            </div>
+          </dd>
           <dt>Phone:</dt>
-          <dd>{{ phone }}</dd>
+          <dd>
+            <div ng-hide="editPhoneEnabled">
+              {{ phone }} <a ng-click="enableEdit( 'phone' )"><i class="glyphicon glyphicon-edit glyphicon-form-control" aria-hidden="true"></i></a>
+            </div>
+            <div ng-show="editPhoneEnabled">
+              <input class="form-control form-control-edit" ng-model="editablePhone" ng-show="editPhoneEnabled" />
+              <a ng-click="saveInput( 'phone' )"><i class="glyphicon glyphicon-save glyphicon-form-control" aria-hidden="true"></i></a>
+              <a ng-click="disableEdit( 'phone' )"><i class="glyphicon glyphicon-remove-circle glyphicon-form-control" aria-hidden="true"></i></a>
+            </div>
+          </dd>
           <dt>Email:</dt>
-          <dd>{{ email }}</dd>
+          <dd>
+            <div ng-hide="editEmailEnabled">
+              {{ email }} <a ng-click="enableEdit( 'email' )"><i class="glyphicon glyphicon-edit glyphicon-form-control" aria-hidden="true"></i></a>
+            </div>
+            <div ng-show="editEmailEnabled">
+              <input class="form-control form-control-edit" ng-model="editableEmail" ng-show="editEmailEnabled" />
+              <a ng-click="saveInput( 'email' )"><i class="glyphicon glyphicon-save glyphicon-form-control" aria-hidden="true"></i></a>
+              <a ng-click="disableEdit( 'email' )"><i class="glyphicon glyphicon-remove-circle glyphicon-form-control" aria-hidden="true"></i></a>
+            </div>
+          </dd>
           <dt>Birthday:</dt>
-          <dd>{{ name }}</dd>
+          <dd>
+            <div ng-hide="editBirthdayEnabled">
+              {{ birthday }} <a ng-click="enableEdit( 'birthday' )"><i class="glyphicon glyphicon-edit glyphicon-form-control" aria-hidden="true"></i></a>
+            </div>
+            <div ng-show="editBirthdayEnabled">
+              <input class="form-control form-control-edit" ng-model="editableBirthday" ng-show="editBirthdayEnabled" />
+              <a ng-click="saveInput( 'birthday' )"><i class="glyphicon glyphicon-save glyphicon-form-control" aria-hidden="true"></i></a>
+              <a ng-click="disableEdit( 'birthday' )"><i class="glyphicon glyphicon-remove-circle glyphicon-form-control" aria-hidden="true"></i></a>
+            </div>
+          </dd>
         </dl>
       </div>
     </div>
