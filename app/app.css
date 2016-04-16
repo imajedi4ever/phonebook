@@ -44,10 +44,11 @@ a:focus {
   padding: 10px;
 }
 
-#footer {
-  text-align: center;
-}
-
 #contacts {
   margin-left: 10px;
+}
+
+#footer {
+  margin-top: 75px;
+  text-align: center;
 }

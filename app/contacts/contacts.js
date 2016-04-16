@@ -16,11 +16,11 @@ angular.module( 'myApp.contacts', [
   } );
 } ] )
 
-.controller( 'ContactsCtrl', function( $scope, $localStorage, $sessionStorage, $http ) {
+.controller( 'ContactsCtrl', function( $scope, $localStorage, $http ) {
   $scope.$storage = $localStorage;
   $scope.header = 'Contacts';
 
-  $http.get( "assets/contacts.json" ).then( function( response ) {
+  $http.get( 'assets/contacts.json' ).then( function( response ) {
     $scope.$storage.contacts = response.data.contacts;
   } );
 } );
