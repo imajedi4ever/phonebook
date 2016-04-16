@@ -1,9 +1,12 @@
 /* app css stylesheet */
 body {
   background-color: #f5f5f5;
+  min-width: 300px;
+  font-size: 2em;
 }
 
 .navbar-inverse {
+
   background-color: #642667;
 }
 
@@ -24,7 +27,6 @@ a:focus {
 }
 
 #contacts li {
-  padding: 10px;
   border-radius: 8px;
 }
 
@@ -37,6 +39,9 @@ a:focus {
 
 #contacts li a {
   color: #000;
+  display: block;
+  height: 45px;
+  padding: 10px;
 }
 
 #footer {

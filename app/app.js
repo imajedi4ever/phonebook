@@ -4,6 +4,7 @@
 angular.module( 'myApp', [
   'ngRoute',
   'myApp.contacts',
+  'myApp.contact',
   'myApp.version'
 ] ).
 config( [ '$routeProvider', function( $routeProvider ) {

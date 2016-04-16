@@ -1,9 +1,7 @@
 # phonebook
 
-The seed contains a sample AngularJS application and is preconfigured to install the Angular
-framework and a bunch of development and testing tools for instant web development gratification.
+The phonebook contains a sample AngularJS application and is preconfigured to install the Angular framework and a bunch of development and testing tools for instant web development gratification.
 
-The seed app doesn't do much, just shows how to wire two controllers and views together.
 
 ### Prerequisites
 
@@ -68,13 +66,12 @@ app/                    --> all of the source files for the application
     contacts.html            --> the partial template
     contacts.js              --> the controller logic
     contacts.js         --> tests of the controller
-  view2/                --> the view2 view template and logic
-    view2.html            --> the partial template
-    view2.js              --> the controller logic
-    view2_test.js         --> tests of the controller
+  contact/                --> the contact view template and logic
+    contact.html            --> the partial template
+    contact.js              --> the controller logic
+    contact_test.js         --> tests of the controller
   app.js                --> main application module
   index.html            --> app layout file (the main html template file of the app)
-  index-async.html      --> just like index.html, but loads js files asynchronously
 karma.conf.js         --> config file for running unit tests with Karma
 e2e-tests/            --> end-to-end tests
   protractor-conf.js    --> Protractor config file
