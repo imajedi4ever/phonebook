@@ -1,30 +1,48 @@
 /* app css stylesheet */
-
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+body {
+  background-color: #f5f5f5;
 }
 
-.menu:before {
-  content: "[";
+.navbar-inverse {
+  background-color: #642667;
 }
 
-.menu:after {
-  content: "]";
+a:hover,
+a:focus {
+  text-decoration: none;
 }
 
-.menu > li {
-  display: inline;
+#header a {
+  color: #ffffff;
+  display: table-cell;
+  height: 50px;
+  vertical-align: middle;
 }
 
-.menu > li:before {
-  content: "|";
-  padding-right: 0.3em;
+#header i {
+  padding: 0px 10px 0px 10px;
 }
 
-.menu > li:nth-child(1):before {
-  content: "";
-  padding: 0;
+#contacts li {
+  padding: 10px;
+  border-radius: 8px;
+}
+
+#contacts li:hover {
+  background-color: #ffffff;
+  -moz-box-shadow: 0 1px 4px #d4d4d4;
+	-webkit-box-shadow: 0 1px 4px #d4d4d4;
+  box-shadow: 0 1px 4px #d4d4d4;
+}
+
+#contacts li a {
+  color: #000;
+}
+
+#footer {
+  text-align: center;
+}
+
+#contacts {
+  margin-left: 10px;
 }

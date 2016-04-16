@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>{{ header }}</h1>
+  <ul id="contacts" class="list-unstyled">
+    <li ng-repeat="contact in contacts">
+      <a href="#/contact/{{ contact.id }}">
+        <i class="glyphicon glyphicon-user" aria-hidden="true"></i> {{ contact.name }}
+      </a>
+    </li>
+  </ul>
+</div>
