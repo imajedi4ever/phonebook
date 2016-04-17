@@ -57,6 +57,10 @@ a:focus {
   margin-top: 25px;
 }
 
+.glyphicon-phone-alt {
+  margin-right: 15px;
+}
+
 .glyphicon-form-control {
   color: #642667;
   margin: 5px;
