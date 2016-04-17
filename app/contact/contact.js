@@ -12,24 +12,22 @@ angular.module( 'myApp.contact', [
   } );
 } ] )
 .controller( 'ContactCtrl', function( $scope, $routeParams, $localStorage, $filter ) {
-  $scope.header = 'Contact';
-  $scope.contact = $filter( 'filter' )( $localStorage.contacts, { id: $routeParams.contactId } )[0];
-
   $scope.setContact = function() {
     $scope.id = $scope.contact.id;
     $scope.name = $scope.contact.name;
     $scope.phone = $scope.contact.phone;
     $scope.email = $scope.contact.email;
     $scope.birthday = $scope.contact.birthday;
+    $scope.setAvatar();
+  };
 
+  $scope.setAvatar = function() {
     if ( $scope.contact.avatar ) {
       $scope.avatar = $scope.contact.avatar;
     } else {
       $scope.avatar = 'http://www.freelanceme.net/Images/default%20profile%20picture.png';
     }
-  }
-
-  $scope.setContact();
+  };
 
   $scope.enableEdit = function( type ) {
     switch( type ) {
@@ -112,4 +110,8 @@ angular.module( 'myApp.contact', [
     $scope.disableEdit( type );
     $scope.setContact();
   };
+
+  $scope.header = 'Contact';
+  $scope.contact = $filter( 'filter' )( $localStorage.contacts, { id: $routeParams.contactId } )[0];
+  $scope.setContact();  
 } );

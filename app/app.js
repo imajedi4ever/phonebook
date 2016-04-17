@@ -7,6 +7,8 @@ angular.module( 'myApp', [
   'myApp.contact',
   'myApp.version'
 ] ).
-config( [ '$routeProvider', function( $routeProvider ) {
-  $routeProvider.otherwise( { redirectTo: '/contacts' } );
+config( [ '$routeProvider', function ( $routeProvider ) {
+  $routeProvider.otherwise( {
+    redirectTo: '/contacts'
+  } );
 } ] );
