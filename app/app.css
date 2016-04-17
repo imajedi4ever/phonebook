@@ -7,6 +7,7 @@ body {
 
 .navbar-inverse {
   background-color: #642667;
+  font-size: 1.8em;
 }
 
 a:hover,
@@ -47,13 +48,26 @@ a:focus {
   margin-left: 10px;
 }
 
+#avatar-img {
+  height: 175px;
+  width: 175px;
+}
+
+#all-contacts {
+  margin-top: 25px;
+}
+
 .glyphicon-form-control {
-  color: #000;
+  color: #642667;
   margin: 5px;
 }
 
 .glyphicon-form-control:hover {
-  color: #642667;
+  color: #88638A;
+}
+
+.glyphicon-form-control-avatar {
+  vertical-align: top;
 }
 
 .form-control-edit {

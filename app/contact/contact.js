@@ -13,14 +13,23 @@ angular.module( 'myApp.contact', [
 } ] )
 .controller( 'ContactCtrl', function( $scope, $routeParams, $localStorage, $filter ) {
   $scope.header = 'Contact';
-
   $scope.contact = $filter( 'filter' )( $localStorage.contacts, { id: $routeParams.contactId } )[0];
-  $scope.id = $scope.contact.id;
-  $scope.name = $scope.contact.name;
-  $scope.phone = $scope.contact.phone;
-  $scope.email = $scope.contact.email;
-  $scope.birthday = $scope.contact.birthday;
-  $scope.avatar = $scope.contact.avatar;
+
+  $scope.setContact = function() {
+    $scope.id = $scope.contact.id;
+    $scope.name = $scope.contact.name;
+    $scope.phone = $scope.contact.phone;
+    $scope.email = $scope.contact.email;
+    $scope.birthday = $scope.contact.birthday;
+
+    if ( $scope.contact.avatar ) {
+      $scope.avatar = $scope.contact.avatar;
+    } else {
+      $scope.avatar = 'http://www.freelanceme.net/Images/default%20profile%20picture.png';
+    }
+  }
+
+  $scope.setContact();
 
   $scope.enableEdit = function( type ) {
     switch( type ) {
@@ -45,7 +54,7 @@ angular.module( 'myApp.contact', [
         $scope.editableAvatar = $scope.avatar;
         break;
       default:
-          // TODO
+        console.log( "Unknown edit type." );
     }
   };
 
@@ -82,24 +91,25 @@ angular.module( 'myApp.contact', [
   $scope.saveInput = function( type ) {
     switch( type ) {
       case "name":
-        $scope.name = $scope.editableName;
+        $scope.contact.name = $scope.editableName;
         break;
       case "phone":
-        $scope.phone = $scope.editablePhone;
+        $scope.contact.phone = $scope.editablePhone;
         break;
       case "email":
-        $scope.email = $scope.editableEmail;
+        $scope.contact.email = $scope.editableEmail;
         break;
       case "birthday":
-        $scope.birthday = $scope.editableBirthday;
+        $scope.contact.birthday = $scope.editableBirthday;
         break;
       case "avatar":
-        $scope.avatar = $scope.editableAvatar;
+        $scope.contact.avatar = $scope.editableAvatar;
         break;
       default:
         console.log( "Unknown input type." );
     }
 
     $scope.disableEdit( type );
+    $scope.setContact();
   };
 } );
