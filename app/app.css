@@ -52,7 +52,6 @@ a:focus {
 #addModal .modal-dialog {
   width: 75%;
   min-width: 340px;
-  margin: auto;
 }
 
 #avatar-img {

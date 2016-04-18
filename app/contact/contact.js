@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module( 'myApp.contact', [
+angular.module( 'phonebook.contact', [
   'ngRoute',
   'ngStorage'
 ] )
@@ -113,5 +113,5 @@ angular.module( 'myApp.contact', [
 
   $scope.header = 'Contact';
   $scope.contact = $filter( 'filter' )( $localStorage.contacts, { id: $routeParams.contactId } )[0];
-  $scope.setContact();  
+  $scope.setContact();
 } );

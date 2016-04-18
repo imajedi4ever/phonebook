@@ -1,7 +1,7 @@
 'use strict';
 
-describe( 'myApp.contacts module', function () {
-  beforeEach( module( 'myApp.contacts' ) );
+describe( 'phonebook.contacts module', function () {
+  beforeEach( module( 'phonebook.contacts' ) );
 
   describe( 'contacts controller', function () {
     it( 'should ....', inject( function ( $controller ) {

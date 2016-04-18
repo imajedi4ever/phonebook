@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module( 'myApp.contacts', [
+angular.module( 'phonebook.contacts', [
   'ngRoute',
   'ngStorage'
 ] )
