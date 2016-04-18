@@ -6,7 +6,7 @@
         <div ng-hide="editAvatarEnabled">
           <img id="avatar-img" ng-src="{{ avatar }}" /> <a ng-click="enableEdit( 'avatar' )" title="Edit"><i class="glyphicon glyphicon-edit glyphicon-form-control glyphicon-form-control-avatar" aria-hidden="true"></i></a>
         </div>
-        <div ng-show="editAvatarEnabled" class="form-control-avatar">
+        <div ng-show="editAvatarEnabled" class="form-control-wrapper">
           <input class="form-control form-control-edit" ng-model="editableAvatar" ng-show="editAvatarEnabled" />
           <a ng-click="saveInput( 'avatar' )" title="Save"><i class="glyphicon glyphicon-save glyphicon-form-control" aria-hidden="true"></i></a>
           <a ng-click="disableEdit( 'avatar' )" title="Cancel"><i class="glyphicon glyphicon-remove-circle glyphicon-form-control" aria-hidden="true"></i></a>
@@ -19,7 +19,7 @@
             <div ng-hide="editNameEnabled" class="contact-name">
               {{ name }} <a ng-click="enableEdit( 'name' )" title="Edit"><i class="glyphicon glyphicon-edit glyphicon-form-control" aria-hidden="true"></i></a>
             </div>
-            <div ng-show="editNameEnabled">
+            <div ng-show="editNameEnabled" class="form-control-wrapper">
               <input class="form-control form-control-edit" ng-model="editableName" ng-show="editNameEnabled" />
               <a ng-click="saveInput( 'name' )" title="Save"><i class="glyphicon glyphicon-save glyphicon-form-control" aria-hidden="true"></i></a>
               <a ng-click="disableEdit( 'name' )" title="Cancel"><i class="glyphicon glyphicon-remove-circle glyphicon-form-control" aria-hidden="true"></i></a>
@@ -30,7 +30,7 @@
             <div ng-hide="editPhoneEnabled">
               {{ phone }} <a ng-click="enableEdit( 'phone' )" title="Edit"><i class="glyphicon glyphicon-edit glyphicon-form-control" aria-hidden="true"></i></a>
             </div>
-            <div ng-show="editPhoneEnabled">
+            <div ng-show="editPhoneEnabled" class="form-control-wrapper">
               <input class="form-control form-control-edit" ng-model="editablePhone" ng-show="editPhoneEnabled" />
               <a ng-click="saveInput( 'phone' )" title="Save"><i class="glyphicon glyphicon-save glyphicon-form-control" aria-hidden="true"></i></a>
               <a ng-click="disableEdit( 'phone' )" title="Cancel"><i class="glyphicon glyphicon-remove-circle glyphicon-form-control" aria-hidden="true"></i></a>
@@ -41,7 +41,7 @@
             <div ng-hide="editEmailEnabled">
               {{ email }} <a ng-click="enableEdit( 'email' )" title="Edit"><i class="glyphicon glyphicon-edit glyphicon-form-control" aria-hidden="true"></i></a>
             </div>
-            <div ng-show="editEmailEnabled">
+            <div ng-show="editEmailEnabled" class="form-control-wrapper">
               <input class="form-control form-control-edit" ng-model="editableEmail" ng-show="editEmailEnabled" />
               <a ng-click="saveInput( 'email' )" title="Save"><i class="glyphicon glyphicon-save glyphicon-form-control" aria-hidden="true"></i></a>
               <a ng-click="disableEdit( 'email' )" title="Cancel"><i class="glyphicon glyphicon-remove-circle glyphicon-form-control" aria-hidden="true"></i></a>
@@ -52,7 +52,7 @@
             <div ng-hide="editBirthdayEnabled">
               {{ birthday }} <a ng-click="enableEdit( 'birthday' )" title="Edit"><i class="glyphicon glyphicon-edit glyphicon-form-control" aria-hidden="true"></i></a>
             </div>
-            <div ng-show="editBirthdayEnabled">
+            <div ng-show="editBirthdayEnabled" class="form-control-wrapper">
               <input class="form-control form-control-edit" ng-model="editableBirthday" ng-show="editBirthdayEnabled" />
               <a ng-click="saveInput( 'birthday' )" title="Save"><i class="glyphicon glyphicon-save glyphicon-form-control" aria-hidden="true"></i></a>
               <a ng-click="disableEdit( 'birthday' )" title="Cancel"><i class="glyphicon glyphicon-remove-circle glyphicon-form-control" aria-hidden="true"></i></a>

@@ -30,7 +30,8 @@ a:focus {
   border-radius: 8px;
 }
 
-#contacts li:hover {
+#contacts li:hover,
+#contacts li:active {
   background-color: #ffffff;
   -moz-box-shadow: 0 1px 4px #d4d4d4;
 	-webkit-box-shadow: 0 1px 4px #d4d4d4;
@@ -51,6 +52,7 @@ a:focus {
 #avatar-img {
   height: 175px;
   width: 175px;
+  border-radius: 90px;
 }
 
 #all-contacts {
@@ -79,7 +81,7 @@ a:focus {
   width: 75%;
 }
 
-.form-control-avatar {
+.form-control-wrapper {
   display: flex;
 }
 
