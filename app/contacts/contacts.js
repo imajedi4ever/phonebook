@@ -15,14 +15,19 @@ angular.module( 'phonebook.contacts', [
     controller: 'ContactCtrl'
   } );
 } ] )
+.factory( 'ContactsService', function( $http ) {
+  return {
+    contacts: function( callback ) {
+      $http.get( 'assets/json/contacts.json' ).success( callback );
+    }
+  };
+} )
 .controller( 'ContactsCtrl', function( $scope, $localStorage, $http ) {
   $scope.$storage = $localStorage;
   $scope.header = 'Contacts';
 
   if ( $.isEmptyObject( $localStorage.contacts ) ) {
-    $http.get( 'assets/json/contacts.json' ).then( function( response ) {
-      $scope.$storage.contacts = response.data.contacts;
-    } );
+    $scope.$storage.contacts = ContactsService;
   }
 
   $scope.submit = function() {
